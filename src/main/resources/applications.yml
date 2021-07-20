@@ -1,0 +1,8 @@
+auth0:
+  audience: https://bugtracketnathaniel/api
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-h93tbnqx.us.auth0.com/
