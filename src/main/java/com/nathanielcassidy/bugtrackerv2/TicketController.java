@@ -12,7 +12,7 @@ public class TicketController {
     @Autowired
     private TicketService ticketService;
 
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/tickets")
     public ArrayList<Ticket> getListOfTickets() {
         return ticketService.getAllTickets();
