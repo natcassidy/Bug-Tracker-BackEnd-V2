@@ -18,23 +18,27 @@ public class TicketController {
         return ticketService.getAllTickets();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/tickets/{id}")
     public Optional<Ticket> getTicket(@PathVariable String id) {
         int intId = Integer.parseInt(id);
         return ticketService.getTicket(intId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method=RequestMethod.POST, value="/tickets")
     public void createTicket(@RequestBody Ticket ticket) {
         ticketService.createTicket(ticket);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method=RequestMethod.DELETE, value="tickets/{id}")
     public void deleteTicket(@PathVariable String id){
         int intId = Integer.parseInt(id);
         ticketService.deleteTicket(intId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(method = RequestMethod.PUT, value="tickets/{id}")
     public void updateTicket(@RequestBody Ticket ticket){
         ticketService.changeTicket(ticket);

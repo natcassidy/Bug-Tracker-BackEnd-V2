@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Ticket {
 
     @Id
-//    @GeneratedValue
+    @GeneratedValue
     private int id;
     private String name;
     private String description;
@@ -20,8 +20,7 @@ public class Ticket {
     protected Ticket() {
     }
 
-    public Ticket(int id, String name, String description, String priority, String status) {
-        this.id = id;
+    public Ticket(String name, String description, String priority, String status) {
         this.name = name;
         this.description = description;
         this.priority = priority;
@@ -48,9 +47,9 @@ public class Ticket {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public String getName() {
         return name;
